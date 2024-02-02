@@ -20,7 +20,7 @@ function PricingCard({ label, price, duration, image, imageAlt, benefits }) {
         <div className={styles["card__price-label"]}>
           <span className={styles["card__price-amount"]}>{price}</span>
 
-          {duration === "" ? null : (
+          {duration && (
             <span className={styles["card__price-duration"]}>{duration}</span>
           )}
         </div>
