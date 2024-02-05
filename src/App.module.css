@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  position: relative;
+  top: -370px;
+  align-items: center;
 }
 
 .bg {
@@ -27,10 +30,4 @@
 }
 
 .prices {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  position: relative;
-  top: -370px;
-  align-items: center;
 }
