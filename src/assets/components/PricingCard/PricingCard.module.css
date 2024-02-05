@@ -88,11 +88,11 @@
   background-color: color-mix(in srgb, var(--price-theme), white 20%);
 }
 
-.center-vertical {
+/* .center-vertical {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .card__button {
   width: 100%;
