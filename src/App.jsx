@@ -1,9 +1,14 @@
 import PricingCard from "./assets/components/PricingCard/PricingCard";
 import styles from "./App.module.css";
+import { useState } from "react";
 
-function App() { 
+function App() {
+  // const showPricingCards = true;
+  const [state, setState] = useState({showPricingCards: true});
 
-  const showPricingCards = true;
+  const updateState = () => {
+    setState({ showPricingCards: !state.showPricingCards });
+  };
 
   const cards = [
     {
@@ -45,12 +50,11 @@ function App() {
           molestiae a odit labore ipsa tempore sit laboriosam corrupti.
         </p>
       </div>
-
-      {showPricingCards && (
+      <button onClick={updateState}>Update State</button>
+      {state.showPricingCards && (
         <div className={`${styles.prices} container`}>
           {cards.map((card) => {
-            return <PricingCard key={card.label} card={card} />
-          
+            return <PricingCard key={card.label} card={card} />;
           })}
         </div>
       )}
