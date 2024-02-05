@@ -47,12 +47,7 @@ function App() {
           return (
             <PricingCard
               key={card.label}
-              label={card.label}
-              duration={card.duration}
-              price={card.price}
-              imageAlt={card.imageAlt}
-              image={card.image}
-              benefits={card.benefits}
+              card={card}
             />
           );
         })}

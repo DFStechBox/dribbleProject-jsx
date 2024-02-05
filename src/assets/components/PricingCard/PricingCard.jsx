@@ -1,12 +1,15 @@
 import styles from "./PricingCard.module.css";
 import Button from "../Button/Button";
+import PropTypes from "prop-types";
 
-function PricingCard({ label, price, duration, image, imageAlt, benefits }) {
+function PricingCard({ card }) {
   const themeClasses = {
     "Start Up": styles["card--startup"],
     Pro: styles["card--pro"],
     Enterprise: styles["card--enterprise"],
   };
+
+const {label, price, duration, image, imageAlt, benefits} = card
 
   const themeClass = themeClasses[label];
 
@@ -49,5 +52,16 @@ function PricingCard({ label, price, duration, image, imageAlt, benefits }) {
     </div>
   );
 }
+
+PricingCard.propTypes = {
+  card: PropTypes.exact({
+    label: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    duration: PropTypes.string,
+    image: PropTypes.string.isRequired,
+    imageAlt: PropTypes.string.isRequired,
+    benefits: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }),
+};
 
 export default PricingCard;
