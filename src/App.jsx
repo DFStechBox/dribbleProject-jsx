@@ -1,7 +1,10 @@
 import PricingCard from "./assets/components/PricingCard/PricingCard";
 import styles from "./App.module.css";
 
-function App() {
+function App() { 
+
+  const showPricingCards = true;
+
   const cards = [
     {
       label: "Start Up",
@@ -42,16 +45,15 @@ function App() {
           molestiae a odit labore ipsa tempore sit laboriosam corrupti.
         </p>
       </div>
-      <div className={`${styles.prices} container`}>
-        {cards.map((card) => {
-          return (
-            <PricingCard
-              key={card.label}
-              card={card}
-            />
-          );
-        })}
-      </div>
+
+      {showPricingCards && (
+        <div className={`${styles.prices} container`}>
+          {cards.map((card) => {
+            return <PricingCard key={card.label} card={card} />
+          
+          })}
+        </div>
+      )}
     </div>
   );
 }
