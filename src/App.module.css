@@ -3,8 +3,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   position: relative;
-  top: -370px;
+  top: -170px;
   align-items: center;
+  border: 1px solid red;
+  padding: 10px;
 }
 
 .bg {
@@ -29,5 +31,4 @@
   font-size: 1.2rem;
 }
 
-.prices {
-}
+
